@@ -509,8 +509,17 @@ body {
   justify-content: flex-end;
 }
 
-.since-heading img {
+.since-heading img.line-reality-desktop {
+  display: block;
   width: fit-content;
+}
+
+.since-heading .line-reality-mobile {
+  display: none;
+}
+
+.reality-pin {
+  display: inline;
 }
 
 .since-our-team {
@@ -1009,6 +1018,10 @@ body {
 }
 
 .experience-text-line.line-desktop {
+  display: block;
+}
+
+.experience-text-line.line-mobile {
   display: none;
 }
 
@@ -1422,11 +1435,34 @@ body {
   .since-wrapper {
     gap: 63px;
   }
-  .since-heading img {
-    left: 104px;
-    top: 6px;
+  .since-heading .line-reality-desktop {
+    display: none !important;
+  }
+
+  .reality-pin {
+    display: inline-block;
     position: relative;
-    max-width: 89px;
+    background: linear-gradient(
+      45deg,
+      rgba(198, 241, 247, 1) 0%,
+      rgba(249, 131, 233, 1) 36%,
+      rgba(184, 119, 255, 1) 74%,
+      rgba(194, 233, 205, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .since-heading .line-reality-mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6px;
+    pointer-events: none;
   }
 
   .clients-main {
