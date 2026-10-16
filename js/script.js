@@ -25,7 +25,6 @@ if (footerMenuBtn) {
   });
 }
 
-// Close mobile menu when clicking any nav cell link
 const mobileNavLinks = document.querySelectorAll(".master-cell .nav-cell");
 mobileNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -35,7 +34,6 @@ mobileNavLinks.forEach((link) => {
   });
 });
 
-// Initialize Swiper for Projects Section
 const projectsSwiper = new Swiper(".projects-swiper", {
   slidesPerView: 1,
   spaceBetween: 24,
@@ -50,7 +48,6 @@ const projectsSwiper = new Swiper(".projects-swiper", {
   },
 });
 
-// Tab Switching for Services Section (Branding, Design, Marketing)
 const serviceTabs = document.querySelectorAll(".service-tab");
 const serviceBodies = document.querySelectorAll(".services-body");
 
@@ -58,11 +55,9 @@ serviceTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const target = tab.getAttribute("data-target");
 
-    // Remove active state from all tabs & content panels
     serviceTabs.forEach((t) => t.classList.remove("active"));
     serviceBodies.forEach((b) => b.classList.remove("active"));
 
-    // Activate the clicked tab and corresponding panel
     tab.classList.add("active");
     const activePanel = document.querySelector(`.services-body[data-tab="${target}"]`);
     if (activePanel) {
