@@ -438,6 +438,11 @@ body {
   transform: translateY(-2px);
 }
 
+.about-anchor p,
+.about-anchor img {
+  pointer-events: none;
+}
+
 #about-us,
 #expertise,
 #get-started,
